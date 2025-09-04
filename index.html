@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Williams - Contact</title>
+    <title>Williams' Portfolio</title>
     <style>
-        /* CSS is repeated here for simplicity */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -27,6 +26,9 @@
             min-height: 70px;
             border-bottom: #77aaff 3px solid;
             text-align: center;
+            position: sticky; /* Keeps the header visible when scrolling */
+            top: 0;
+            z-index: 100;
         }
         header a {
             color: #fff;
@@ -43,10 +45,26 @@
             display: inline;
             padding: 0 20px 0 20px;
         }
-        .main-content {
+        section {
             padding: 20px;
-            background: #fff;
             margin-top: 20px;
+            background: #fff;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
         }
         .contact-info {
             list-style: none;
@@ -64,25 +82,58 @@
             <h1>Williams' Portfolio</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="container main-content">
-        <h2>Contact Me</h2>
-        <p>I'd love to hear from you! You can reach me through the following channels:</p>
-        <ul class="contact-info">
-            <li><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></li>
-        </ul>
-        <p>Feel free to send me a message regarding collaboration, job opportunities, or just to say hello!</p>
-    </div>
+    <main class="container">
+
+        <section id="home">
+            <h2>Welcome to My Portfolio</h2>
+            <p>This is the home page of my professional portfolio. Please navigate using the links above to learn more about me, see my work, and get in touch.</p>
+            <p>I am a passionate [Your Profession, e.g., web developer, photographer, designer] dedicated to creating beautiful and functional projects. I believe in [Your Philosophy, e.g., clean code, user-centered design, impactful visuals].</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! My name is Williams, and I am a [Your Profession]. I have been working in this field for [Number] years, specializing in [Your Specialization, e.g., front-end development, digital art, product photography].</p>
+            <p>I am passionate about learning new technologies and skills to stay at the forefront of my industry. In my free time, I enjoy [Your Hobbies, e.g., hiking, reading, painting].</p>
+        </section>
+
+        <section id="gallery">
+            <h2>My Work Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300" alt="Project 1">
+                    <p>Project Title 1</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300" alt="Project 2">
+                    <p>Project Title 2</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300" alt="Project 3">
+                    <p>Project Title 3</p>
+                </div>
+                </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>I'd love to hear from you! You can reach me through the following channels:</p>
+            <ul class="contact-info">
+                <li><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></li>
+            </ul>
+        </section>
+
+    </main>
 
 </body>
 </html>
